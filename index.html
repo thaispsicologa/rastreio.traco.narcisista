@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+
+    <!-- SEO -->
+    <meta name="description" content="Bateria de Rastreio – Traços Narcisistas: NPI-16, PID-5-BF (25), FFNI-SF (60) e MINI (DSM-5-TR). Resultados claros e relatório integrado.">
+    <meta name="keywords" content="narcisismo, TPN, NPI-16, PID-5, FFNI, MINI, DSM-5-TR, triagem clínica, personalidade">
+    <meta name="author" content="Thaís Campos, Psicóloga Clínica">
+    <meta name="robots" content="index,follow">
+    <meta name="theme-color" content="#0f172a">
+    <link rel="canonical" href="https://ricmurtapsicologia.github.io/bateria.narcisismo/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Bateria de Rastreio – Traços Narcisistas">
+    <meta property="og:description" content="Aplicação integrada de NPI-16, PID-5-BF (25), FFNI-SF (60) e MINI (DSM-5-TR). Relatório integrado pronto para enviar à psicóloga.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ricmurtapsicologia.github.io/bateria.narcisismo/">
+    <meta property="og:site_name" content="Thaís Campos Psicologia">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:image" content="https://i.pinimg.com/736x/d9/05/47/d90547059a00ec26b02c182e15a24033.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bateria de Rastreio – Traços Narcisistas">
+    <meta name="twitter:description" content="NPI-16, PID-5-BF, FFNI-SF e MINI (DSM-5-TR) com relatório integrado.">
+    <meta name="twitter:image" content="https://i.pinimg.com/1200x/6f/8e/f6/6f8ef66da1d95a7401ef370c7e2752f2.jpg">
+
+    <link rel="icon" href="/favicon.ico">
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+        { "@context":"https://schema.org", "@type":"WebApplication", "name":"Bateria de Rastreio – Traços Narcisistas", "applicationCategory":"HealthApplication", "operatingSystem":"Web", "url":"https://ricmurtapsicologia.github.io/bateria.narcisismo/", "image":"https://i.pinimg.com/1200x/6f/8e/f6/6f8ef66da1d95a7401ef370c7e2752f2.jpg",
+        "description":"Aplicação integrada de NPI-16, PID-5-BF (25), FFNI-SF (60) e MINI (DSM-5-TR) com relatório clinicamente orientado." }
+    </script>
+
+    <style>
+        :root{
+          --bg:#0f172a; --panel:#0b1224; --card:#111827; --text:#e5e7eb; --muted:#9aa4b2;
+          --accent:#22d3ee; --accent2:#a78bfa; --border:rgba(255,255,255,.12); --field:#0b1224;
+          --ok:#22c55e; --warn:#f59e0b; --bad:#ef4444; --focus:#60a5fa; --shadow:0 10px 30px rgba(0,0,0,.35);
+          --r:16px;
+          --fz-base:16px; --fz-h1:clamp(1.35rem,2.5vw,2rem); --fz-h2:clamp(1.1rem,2vw,1.35rem);
+        }
+        [data-theme="light"]{
+          --bg:#f1f5f9; --panel:#ffffff; --card:#ffffff; --text:#0f172a; --muted:#475569;
+          --accent:#0891b2; --accent2:#7c3aed; --border:rgba(2,6,23,.12); --field:#f8fafc;
+          --ok:#16a34a; --warn:#d97706; --bad:#dc2626; --focus:#2563eb; --shadow:0 12px 28px rgba(2,6,23,.08);
+        }
+        *{box-sizing:border-box}
+        html{font-size:var(--fz-base)}
+        body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;line-height:1.5}
+        .wrap{max-width:1200px;margin:0 auto;padding:24px}
+        header{background:var(--panel);border:1px solid var(--border);border-radius:var(--r);padding:26px;box-shadow:var(--shadow);margin-bottom:20px}
+        h1{margin:0 0 8px 0;font-size:var(--fz-h1);letter-spacing:.2px}
+        h2{font-size:var(--fz-h2);margin:0 0 10px}
+        .lead{margin:8px 0 0;color:var(--muted);text-align:justify}
+        .topbar{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+        .toggle{display:inline-flex;align-items:center;gap:8px}
+        .switch{width:52px;height:30px;border-radius:20px;background:var(--card);border:1px solid var(--border);position:relative}
+        .switch i{position:absolute;top:3px;left:3px;width:24px;height:24px;background:linear-gradient(#fff,#e5e7eb);border-radius:999px;transition:left .15s}
+        [data-theme="light"] .switch i{left:25px}
+        .onb{margin-top:12px;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:12px}
+        .onb ol{margin:0;padding-left:18px}
+        .card{background:var(--panel);border:1px solid var(--border);border-radius:var(--r);box-shadow:var(--shadow);padding:18px;margin-bottom:18px}
+        .grid{display:grid;gap:16px;grid-template-columns:1fr}
+        .grid2{display:grid;grid-template-columns:1fr}
+        @media(min-width:980px){.grid2{grid-template-columns:1fr 1fr;gap:16px}}
+        label{font-weight:700;margin-bottom:6px;display:block}
+        input,select,textarea{width:100%;padding:12px 14px;background:var(--field);color:var(--text);border:1px solid var(--border);border-radius:12px;outline:none;font-size:1rem}
+        select option{color:var(--text);background:var(--field)}
+        textarea{min-height:110px;resize:vertical}
+        .q{padding:14px;border:1px solid var(--border);border-radius:12px;background:var(--card)}
+        .row{display:flex;gap:10px;flex-wrap:wrap}
+        .btn{appearance:none;border:none;border-radius:12px;padding:12px 16px;cursor:pointer;color:#fff;background:linear-gradient(120deg,var(--accent),var(--accent2));font-weight:800;box-shadow:0 10px 18px rgba(0,0,0,.25)}
+        .btn.secondary{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+        .btn.whats{background:#25D366;color:#083d1a}
+        .out{margin-top:10px;padding:14px;border-radius:12px;background:var(--card);border:1px dashed var(--border);white-space:pre-wrap}
+        .muted{color:var(--muted)}
+        .stat{display:inline-block;padding:6px 10px;border-radius:999px;font-weight:800}
+        .ok{background:rgba(34,197,94,.15);color:var(--ok);border:1px solid rgba(34,197,94,.4)}
+        .warn{background:rgba(245,158,11,.15);color:var(--warn);border:1px solid rgba(245,158,11,.4)}
+        .bad{background:rgba(239,68,68,.15);color:var(--bad);border:1px solid rgba(239,68,68,.4)}
+        .invalid{border-color:var(--bad) !important;box-shadow:0 0 0 3px rgba(239,68,68,.18)}
+        .para{text-align:justify}
+        details{border:1px solid var(--border);border-radius:12px;background:var(--panel);padding:10px}
+        details summary{cursor:pointer;font-weight:800}
+        footer{margin:28px 0 8px;text-align:center;color:var(--muted);display:grid;gap:4px;place-items:center}
+        footer .rights{opacity:.9}
+    
+        @media (max-width:480px){
+          html{font-size:18px}
+          .wrap{padding:18px}
+          .q{padding:12px}
+          input,select,textarea{padding:14px 16px}
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <div class="topbar">
+                <div>
+                    <h1>Bateria de Rastreio – Traços Narcisistas</h1>
+                    <p class="lead para">
+                        Instrumento profissional para triagem de traços narcisistas com quatro testes validados ou amplamente utilizados em pesquisa: Inventário de Narcisismo – versão breve (NPI-16), Inventário de Personalidade do DSM-5 – Forma Breve (PID-5-BF, 25 itens), Inventário
+                        dos Cinco Fatores do Narcisismo – Forma Curta (FFNI-SF, 60 itens) e uma autoavaliação baseada no DSM-5-TR por meio da Mini International Neuropsychiatric Interview (MINI). Leia cada item com atenção, responda com sinceridade e,
+                        ao final,
+                        <strong>gere o relatório e envie à sua psicóloga</strong>.
+                    </p>
+                </div>
+                <label class="toggle" title="Alternar modo claro/escuro">
+                    <span class="muted">Modo</span>
+                    <div class="switch" id="themeSwitch"><i></i></div>
+                </label>
+            </div>
+
+            <div class="onb">
+                <strong>Como responder</strong>
+                <ol>
+                    <li>Responda <em>todos</em> os itens de cada teste. Se algum item ficar sem resposta, ele será destacado e a correção não será realizada até que seja preenchido.</li>
+                    <li>No <strong>Inventário de Narcisismo – versão breve (NPI-16)</strong>, leia cada <strong>afirmação individual</strong> e marque <strong>Sim</strong> ou <strong>Não</strong> conforme descreva você.</li>
+                    <li>Nos demais testes — <strong>PID-5-BF</strong>, <strong>FFNI-SF</strong> e <strong>MINI</strong> — use a escala apresentada em cada item para indicar o quanto a frase se aplica a você.</li>
+                    <li>Ao final, clique em <strong>Gerar Relatório Integrado</strong>. Você poderá <strong>copiar o resultado</strong> e também <strong>enviá-lo à sua psicóloga</strong> usando o botão do WhatsApp.</li>
+                </ol>
+            </div>
+        </header>
+
+        <!-- Identificação -->
+        <section class="card">
+            <h2>Identificação</h2>
+            <div class="grid grid2">
+                <div>
+                    <label for="nome">Nome completo</label>
+                    <input id="nome" type="text" placeholder="Ex.: Maria de Souza Silva">
+                </div>
+                <div>
+                    <label for="idade">Idade</label>
+                    <input id="idade" type="number" min="0" max="120" placeholder="Ex.: 32">
+                </div>
+                <div>
+                    <label for="data">Data da aplicação</label>
+                    <input id="data" type="date">
+                </div>
+                <div>
+                    <label for="obs">Observações clínicas (opcional)</label>
+                    <textarea id="obs" placeholder="Contexto, medicação, episódios prévios, comorbidades, risco atual..."></textarea>
+                </div>
+            </div>
+        </section>
+
+        <!-- NPI-16 -->
+        <section class="card" id="npi-sec">
+            <div class="topbar" style="margin-bottom:8px">
+                <h2 style="margin:0">NPI-16 – Inventário de Narcisismo (versão breve)</h2>
+            </div>
+            <p class="muted para" style="margin-top:-6px">
+                Para cada afirmação, selecione <strong>Sim</strong> se ela descreve você; ou <strong>Não</strong> caso contrário.
+            </p>
+            <div id="npi-items" class="grid"></div>
+            <div class="row" style="margin-top:10px">
+                <button class="btn" id="npi-score">Corrigir NPI-16</button>
+                <button class="btn secondary" id="npi-clear">Limpar</button>
+            </div>
+            <div id="npi-out" class="out" aria-live="polite"></div>
+        </section>
+
+        <!-- PID-5-BF -->
+        <section class="card" id="pid-sec">
+            <div class="topbar" style="margin-bottom:8px">
+                <h2 style="margin:0">PID-5-BF (25) – Traços de Personalidade (DSM-5)</h2>
+                <span class="muted">Escala 0–3 em cada item</span>
+            </div>
+            <div id="pid-items" class="grid"></div>
+            <div class="row" style="margin-top:10px">
+                <button class="btn" id="pid-score">Corrigir PID-5-BF</button>
+                <button class="btn secondary" id="pid-clear">Limpar</button>
+            </div>
+            <div id="pid-out" class="out" aria-live="polite"></div>
+        </section>
+
+        <!-- FFNI-SF -->
+        <section class="card" id="ffni-sec">
+            <div class="topbar" style="margin-bottom:8px">
+                <h2 style="margin:0">FFNI-SF (60) – Inventário de Narcisismo pelos Cinco Fatores</h2>
+            </div>
+            <div id="ffni-items" class="grid"></div>
+            <div class="row" style="margin-top:10px">
+                <button class="btn" id="ffni-score">Corrigir FFNI-SF</button>
+                <button class="btn secondary" id="ffni-clear">Limpar</button>
+            </div>
+            <div id="ffni-out" class="out" aria-live="polite"></div>
+        </section>
+
+        <!-- MINI – DSM-5-TR (Narcisista) -->
+        <section class="card" id="mini-sec">
+            <div class="topbar" style="margin-bottom:8px">
+                <h2 style="margin:0">MINI – DSM-5-TR (Narcisista) • Autoavaliação</h2>
+            </div>
+            <p class="muted para" style="margin-top:-6px">
+                Marque <strong>Sim</strong> quando a frase descreve você de forma consistente ao longo do tempo e em diferentes contextos.
+            </p>
+            <div id="mini-items" class="grid"></div>
+            <div class="row" style="margin-top:10px">
+                <button class="btn" id="mini-score">Corrigir MINI (DSM-5-TR)</button>
+                <button class="btn secondary" id="mini-clear">Limpar</button>
+            </div>
+            <div id="mini-out" class="out" aria-live="polite"></div>
+        </section>
+
+        <!-- Relatório Integrado -->
+        <section class="card">
+            <div class="topbar" style="margin-bottom:8px">
+                <h2 style="margin:0">Relatório Integrado</h2>
+            </div>
+            <div class="row">
+                <button class="btn" id="gen-report">Gerar relatório integrado</button>
+                <button class="btn secondary" id="copy-report">Copiar relatório</button>
+                <button class="btn whats" id="send-whats">Enviar à minha sicóloga</button>
+            </div>
+            <div id="report" class="out para" aria-live="polite"></div>
+
+            <details style="margin-top:8px">
+                <summary>Sobre esta bateria</summary>
+                <p class="para muted">
+                    Esta é uma <strong>bateria de rastreio</strong>. Resultados elevados sugerem traços relevantes e <strong>orientam investigação clínica estruturada</strong>, mas <strong>não substituem</strong> uma avaliação presencial com psicólogo
+                    ou equipe multiprofissional. A interpretação deve considerar curso temporal, contexto, comorbidades, história de desenvolvimento e impacto no funcionamento interpessoal, ocupacional e acadêmico.
+                </p>
+            </details>
+        </section>
+
+        <footer>
+            <div>Thaís Campos • Psicóloga Clínica</div>
+            <div class="rights">© <span id="yr"></span> • Todos os direitos reservados</div>
+        </footer>
+    </div>
+
+    <script>
+        // ===== Tema / Ano =====
+          const savedTheme = localStorage.getItem('npd_theme');
+          if(savedTheme){ document.documentElement.setAttribute('data-theme', savedTheme); }
+          document.getElementById('themeSwitch').onclick = ()=>{
+            const cur = document.documentElement.getAttribute('data-theme')==='light'?'dark':'light';
+            document.documentElement.setAttribute('data-theme',cur);
+            localStorage.setItem('npd_theme',cur);
+          };
+          document.getElementById('yr').textContent = new Date().getFullYear();
+        
+          // ===== Helpers =====
+          const toSel = opts => `<option value="">Selecione...</option>${opts.map(o=>`<option value="${o.v}">${o.t}</option>`).join('')}`;
+          const mkYN = () => toSel([{v:'sim',t:'Sim'},{v:'nao',t:'Não'}]);
+          const mkLikert = (from,to,labels)=> {
+            const arr = [];
+            for(let v=from; v<=to; v++){
+              const t = labels && labels[v] ? labels[v] : v;
+              arr.push({v:String(v), t:String(t)});
+            }
+            return toSel(arr);
+          };
+          const needAll = (nodes)=>{
+            let ok=true;
+            nodes.forEach(n=>{
+              if(n.value===''){ n.classList.add('invalid'); ok=false; } else { n.classList.remove('invalid'); }
+            });
+            return ok;
+          };
+          const idVal = id => document.getElementById(id).value.trim();
+          const out = id => document.getElementById(id);
+        
+          // ====== NPI-16 ======
+          const npiItemsOnly = [
+            "Eu realmente gosto de ser o centro das atenções.",
+            "Eu acho que sou uma pessoa especial.",
+            "Todos gostam de ouvir minhas histórias.",
+            "Eu insisto em receber o respeito que me é devido.",
+            "Eu gosto de ter autoridade sobre as pessoas.",
+            "Eu serei uma ótima pessoa.",
+            "Eu consigo fazer qualquer pessoa acreditar em qualquer coisa que eu queira.",
+            "Eu espero muito de outras pessoas.",
+            "Eu gosto de ser o centro das atenções.",
+            "Eu sou uma pessoa extraordinária.",
+            "Eu sempre sei o que estou fazendo.",
+            "Eu acho que é fácil manipular as pessoas.",
+            "As pessoas sempre parecem reconhecer minha autoridade.",
+            "Eu sei que sou bom/boa porque todos continuam me dizendo isso.",
+            "Estou apto(a) a me mostrar se tenho a chance.",
+            "Eu sou mais capaz do que as outras pessoas."
+          ];
+          const npiBox = document.getElementById('npi-items');
+          const npiSel = [];
+          npiItemsOnly.forEach((txt,i)=>{
+            const w = document.createElement('div'); w.className='q';
+            w.innerHTML = `
+              <label for="npi_${i}"><strong>${i+1}. ${txt}</strong></label>
+              <select id="npi_${i}" data-req="1" aria-label="Selecione Sim ou Não para o item ${i+1}">${mkYN()}</select>
+            `;
+            npiBox.appendChild(w);
+            npiSel.push(w.querySelector('select'));
+          });
+        
+          function scoreNPI(){
+            if(!needAll(npiSel)) throw 'Há itens do NPI-16 sem resposta.';
+            const yes = npiSel.filter(s=>s.value==='sim').length;
+            let faixa = 'baixo', tag = '<span class="stat muted">Baixo</span>';
+            if(yes>=13){ faixa='elevado'; tag='<span class="stat ok">Elevado</span>'; }
+            else if(yes>=6){ faixa='moderado'; tag='<span class="stat warn">Moderado</span>'; }
+            const txt =
+        `NPI-16: ${yes}/16 “Sim”. ${tag}
+        Interpretação clínica:
+        ${faixa==='baixo'
+          ? 'Traços narcisistas baixos. Em geral, há menor tendência a autoengrandecimento e a busca de status. Sugestões: consolidar autoestima realista, praticar feedback bidirecional e manter atenção a limites saudáveis em relações.'
+          : faixa==='moderado'
+          ? 'Faixa atencional. Existem traços de autovalorização e busca de reconhecimento que podem ser adaptativos ou gerar atritos. Sugestões: monitorar uso de elogios/admiração como regulação emocional, treinar empatia deliberada e pactuar expectativas em relacionamentos.'
+          : 'Traços narcisistas elevados (grandiosidade, senso de direito e tendência a exploração podem emergir). Sugestões: trabalhar empatia e perspectiva do outro, tolerância a críticas, regulação de raiva e frustração, e acordos explícitos de responsabilidade.'}`;
+            return {yes, faixa, tag, txt};
+          }
+          document.getElementById('npi-score').onclick=()=>{ try{ out('npi-out').innerHTML=''; const r=scoreNPI(); out('npi-out').innerHTML=r.txt; }catch(e){ alert(e); } };
+          document.getElementById('npi-clear').onclick=()=>{ npiSel.forEach(s=>{s.value=''; s.classList.remove('invalid');}); out('npi-out').innerHTML=''; };
+        
+          // ====== PID-5-BF (25; 0–3) ======
+          const pidItems = [
+            "Eu me considero uma pessoa imprudente.",
+            "Sinto que ajo totalmente por impulso.",
+            "Mesmo sabendo que não devia, não consigo parar de tomar decisões precipitadas.",
+            "Frequentemente sinto que nada do que faço realmente importa.",
+            "As outras pessoas me acham irresponsável.",
+            "Não sou bom em planejar com antecedência.",
+            "Minhas ideias frequentemente não fazem sentido para os outros.",
+            "Eu me preocupo com quase tudo.",
+            "Fico emocionado(a) facilmente, muitas vezes por motivos insignificantes.",
+            "Tenho mais medo do que tudo de ficar sozinho(a) na vida.",
+            "Fico preso(a) em uma única forma de fazer as coisas, mesmo quando é claro que não vai funcionar.",
+            "Já vi coisas que, na verdade, não estavam lá.",
+            "Evito relacionamentos românticos.",
+            "Não tenho interesse em fazer amizades.",
+            "Irrito-me facilmente com qualquer coisa.",
+            "Não gosto de ficar muito próximo(a) das pessoas.",
+            "Não é grande coisa se eu magoar os sentimentos de outras pessoas.",
+            "Raramente fico entusiasmado(a) com qualquer coisa.",
+            "Desejo atenção dos outros.",
+            "Frequentemente tenho que lidar com pessoas menos importantes do que eu.",
+            "Frequentemente tenho pensamentos que fazem sentido para mim, mas que outras pessoas consideram estranhos.",
+            "Uso as pessoas para conseguir o que quero.",
+            "Às vezes “desligo-me” e de repente percebo que muito tempo se passou.",
+            "As coisas ao meu redor frequentemente parecem irreais ou mais reais do que o habitual.",
+            "É fácil para mim tirar vantagem das outras pessoas."
+          ];
+          const ANT_IDX = [16,19,21,24,22].map(i=>i-1);
+        
+          const pidBox = document.getElementById('pid-items');
+          const pidSel = [];
+          const likert03 = {0:"0 — muito falso",1:"1 — mais falso que verdadeiro",2:"2 — mais verdadeiro que falso",3:"3 — muito verdadeiro"};
+          pidItems.forEach((t,i)=>{
+            const w = document.createElement('div'); w.className='q';
+            w.innerHTML = `<label for="pid_${i}">${i+1}. ${t}</label>
+              <select id="pid_${i}" data-req="1">${mkLikert(0,3,likert03)}</select>`;
+            pidBox.appendChild(w); pidSel.push(w.querySelector('select'));
+          });
+        
+          function scorePID(){
+            if(!needAll(pidSel)) throw 'Há itens do PID-5-BF sem resposta.';
+            const vals = pidSel.map(s=>Number(s.value));
+            const total = vals.reduce((a,b)=>a+b,0);
+            const mean = total/25;
+            const antagonMean = ANT_IDX.map(i=>vals[i]).reduce((a,b)=>a+b,0)/ANT_IDX.length;
+        
+            const band = m=> (m>=2.30?'elevado':(m>=2.00?'atencional':'baixo'));
+            const bandTotal = band(mean), bandAnt = band(antagonMean);
+        
+            const txt =
+        `PID-5-BF (média 0–3): total=${mean.toFixed(2)}; Antagonismo=${antagonMean.toFixed(2)}.
+        ${bandTotal==='baixo'?'Faixa global baixa: os traços disfuncionais gerais parecem discretos.'
+          : bandTotal==='atencional'?'Faixa global atencional: há indícios dimensionais relevantes que merecem exploração clínica.'
+          : 'Faixa global elevada: sugere maior desregulação de traços de personalidade no conjunto.'}
+        Foco em Antagonismo:
+        ${bandAnt==='baixo'
+          ? 'Antagonismo baixo: menor tendência a arrogância, hostilidade, exploração e desprezo por necessidades alheias. Direcionamento: manter práticas de empatia e cooperação.'
+          : bandAnt==='atencional'
+          ? 'Antagonismo em zona de atenção: podem ocorrer episódios de postura defensiva, direito subjetivo e busca de admiração. Direcionamento: treino de empatia, acordos de convivência e reconhecimento de limites.'
+          : 'Antagonismo elevado: compatível com traços nucleares ligados ao espectro narcisista (grandiosidade, senso de direito, baixa empatia, exploração). Direcionamento: psicoeducação sobre empatia, reestruturação de crenças centrais, treino de reparação e feedback seguro.'}`;
+            return {mean, antagonMean, bandTotal, bandAnt, txt};
+          }
+          document.getElementById('pid-score').onclick=()=>{ try{ out('pid-out').innerHTML=''; const r=scorePID(); out('pid-out').innerHTML=r.txt; }catch(e){ alert(e); } };
+          document.getElementById('pid-clear').onclick=()=>{ pidSel.forEach(s=>{s.value=''; s.classList.remove('invalid');}); out('pid-out').innerHTML=''; };
+        
+          // ====== FFNI-SF (60; 1–5; inversões: 19,27,38) ======
+          const ffniItems = [
+            "Sou extremamente ambicioso(a).",
+            "As pessoas dizem que eu me gabo demais, mas tudo o que digo é verdade.",
+            "Liderança vem naturalmente para mim.",
+            "Quando alguém faz algo de bom por mim, eu me pergunto o que aquela pessoa quer de mim.",
+            "Eu mereço receber tratamento especial.",
+            "Eu me divirto muito entretendo outras pessoas.",
+            "É aceitável tirar vantagem das pessoas para conseguir o que quero.",
+            "Costumo fantasiar que um dia serei famoso(a).",
+            "Quando me julgam, simplesmente não me importo.",
+            "Eu não me preocupo com as necessidades dos outros.",
+            "Sou muito bom(a) em manipular as pessoas.",
+            "Sinto frequentemente que preciso de elogios para ter certeza de mim mesmo(a).",
+            "Eu odeio ser criticado(a) tanto que não consigo controlar meu temperamento quando isso acontece.",
+            "Quando percebo que falhei em algo, eu me sinto humilhado(a).",
+            "Faria quase qualquer coisa para sentir uma boa dose de emoção (adrenalina).",
+            "Tenho um enorme desejo de ter sucesso.",
+            "Só convivo com pessoas do meu nível.",
+            "Sinto-me confortável em assumir posições de autoridade.",
+            "Confio que as outras pessoas serão honestas comigo.",
+            "Não acho que as regras valham para mim tanto quanto para os outros.",
+            "Eu gosto de ser notado(a) pelas outras pessoas.",
+            "Vou usar pessoas como ferramentas para me promover.",
+            "Frequentemente fantasio em ter muito sucesso e poder.",
+            "Não ligo muito para o que os outros pensam de mim.",
+            "Geralmente não presto muita atenção aos sofrimentos alheios.",
+            "Sei como fazer as pessoas fazerem o que eu quero.",
+            "Sou estável em meu senso de identidade (sei quem sou).",
+            "Já perdi o controle e fiquei furioso(a) quando não fui tratado(a) da forma que considero justa.",
+            "Sinto-me horrível quando sou humilhado(a) em público.",
+            "Sou um pouco destemido(a).",
+            "Aspiro ser uma pessoa grandiosa.",
+            "Não perco tempo convivendo com pessoas que considero “inferiores”.",
+            "As pessoas geralmente seguem minha liderança naturalmente.",
+            "Tenho dificuldade em confiar nas pessoas.",
+            "Por mais que pareça injusto, mereço atenção extra.",
+            "Adoro ser a pessoa mais popular numa festa.",
+            "Às vezes, para ter sucesso, é preciso usar outras pessoas.",
+            "Raramente fantasio em me tornar famoso(a).",
+            "Sou bem indiferente às críticas dos outros.",
+            "Não valorizo muito demonstrações de compaixão ou simpatia.",
+            "Sei como falar para conseguir o que quero.",
+            "Sinto-me muito inseguro(a) sobre alcançar algo importante na vida.",
+            "Fico com muita raiva quando não recebo o que considero merecer.",
+            "Sinto-me envergonhado(a) quando cometo um erro na frente dos outros.",
+            "Arriscaria me machucar para fazer algo emocionante.",
+            "Sou determinado(a) a ter sucesso.",
+            "Sou uma pessoa superior.",
+            "Assumo o controle na maioria das situações.",
+            "Frequentemente suspeito que as pessoas não me contam toda a verdade.",
+            "Acredito que tenho direito a condições especiais.",
+            "Adoro entreter as pessoas.",
+            "Estou disposto(a) a me aproveitar dos outros para atingir meus objetivos.",
+            "Algum dia acredito que a maioria das pessoas saberá meu nome.",
+            "A opinião dos outros sobre mim me importa pouco.",
+            "Não me abalo com o sofrimento dos outros.",
+            "É fácil conseguir que as pessoas façam o que eu quero.",
+            "Queria não me importar tanto com o que os outros pensam de mim.",
+            "Fico furioso(a) quando as pessoas me desrespeitam.",
+            "Sinto vergonha quando cometo um erro na frente dos outros.",
+            "Gosto de fazer coisas arriscadas ou perigosas."
+          ];
+          const ffniReverse = new Set([19,27,38]); // inversões (não exibidas visualmente)
+        
+          const ffniBox = document.getElementById('ffni-items');
+          const ffniSel = [];
+          const likert15 = {1:"1 — discordo totalmente",2:"2",3:"3",4:"4",5:"5 — concordo totalmente"};
+          ffniItems.forEach((t,i)=>{
+            const w = document.createElement('div'); w.className='q';
+            // sem marcar visualmente itens invertidos
+            w.innerHTML = `<label for="ffni_${i}">${i+1}. ${t}</label>
+              <select id="ffni_${i}" data-req="1">${mkLikert(1,5,likert15)}</select>`;
+            ffniBox.appendChild(w); ffniSel.push(w.querySelector('select'));
+          });
+        
+          const VUL_IDX = [12,27,42,57,13,28,43,58,14,29,44,59].map(n=>n-1);
+          const GRAND_SET = new Set(Array.from({length:60},(_,i)=>i).filter(i=>!VUL_IDX.includes(i)));
+        
+          function scoreFFNI(){
+            if(!needAll(ffniSel)) throw 'Há itens do FFNI-SF sem resposta.';
+            let vals = ffniSel.map(s=>Number(s.value));
+            ffniReverse.forEach(n1=>{ const i=n1-1; vals[i] = 6 - vals[i]; }); // inversão aplicada silenciosamente
+        
+            const meanTotal = vals.reduce((a,b)=>a+b,0)/60;
+            const meanVul = VUL_IDX.map(i=>vals[i]).reduce((a,b)=>a+b,0)/VUL_IDX.length;
+            const meanGra = Array.from(GRAND_SET).map(i=>vals[i]).reduce((a,b)=>a+b,0)/GRAND_SET.size;
+        
+            const band = m => (m>=2.9?'elevado':(m>=2.2?'moderado':'baixo'));
+            const bTot=band(meanTotal), bGra=band(meanGra), bVul=band(meanVul);
+        
+            const interp = (b, foco) => b==='baixo'
+              ? `Faixa baixa em ${foco}: tendência a menor necessidade de admiração/autoridade e menor reatividade a críticas. Direcionamento: manter humildade estratégica e empatia, sem perder assertividade.`
+              : b==='moderado'
+              ? `Faixa moderada em ${foco}: traços presentes em intensidade situacional. Direcionamento: treinar feedback, tolerância à frustração e metas alinhadas a valores (evitar dependência de validação externa).`
+              : `Faixa elevada em ${foco}: indica intensidade clínica de traços (p.ex., autoimportância, exploração, intolerância a críticas ou vergonha/hipersensibilidade). Direcionamento: trabalhar crenças centrais, compaixão focada, reparação e habilidades de mentalização.`;
+        
+            const txt =
+        `FFNI-SF (média 1–5):
+        Total=${meanTotal.toFixed(2)} • Grandioso=${meanGra.toFixed(2)} • Vulnerável=${meanVul.toFixed(2)}.
+        ${interp(bGra,'Narcisismo Grandioso')}
+        ${interp(bVul,'Narcisismo Vulnerável')}
+        Síntese global: ${bTot==='baixo'?'perfil global baixo, com riscos reduzidos de disfunção narcisista.':
+          bTot==='moderado'?'perfil global moderado; observar gatilhos interpessoais e padrões de validação.':
+          'perfil global elevado; recomenda-se avaliação clínica estruturada com foco em funcionamento interpessoal, autocrítica/culpa versus autoengrandecimento e estratégias de regulação emocional.'}`;
+            return {meanTotal, meanGra, meanVul, bTot, bGra, bVul, txt};
+          }
+          document.getElementById('ffni-score').onclick=()=>{ try{ out('ffni-out').innerHTML=''; const r=scoreFFNI(); out('ffni-out').innerHTML=r.txt; }catch(e){ alert(e); } };
+          document.getElementById('ffni-clear').onclick=()=>{ ffniSel.forEach(s=>{s.value=''; s.classList.remove('invalid');}); out('ffni-out').innerHTML=''; };
+        
+          // ====== MINI – DSM-5-TR (autoavaliação narcisista) ======
+          const miniCrit = [
+            // 9 critérios sintomáticos (texto amigável ao paciente)
+            "Sinto que sou mais importante do que os outros e que mereço reconhecimento especial.",
+            "Passo muito tempo fantasiando sucesso, poder, brilho, beleza ou um amor ideal.",
+            "Acredito que sou uma pessoa especial e que só pessoas especiais realmente me entendem.",
+            "Preciso de muitos elogios e admiração para me sentir bem.",
+            "Espero tratamento especial e que os outros façam o que eu quero.",
+            "Uso outras pessoas para alcançar meus objetivos.",
+            "Tenho dificuldade em reconhecer e considerar os sentimentos e necessidades dos outros.",
+            "Frequentemente sinto inveja dos outros ou penso que eles sentem inveja de mim.",
+            "Frequentemente ajo de forma arrogante ou superior.",
+            // Curso/impacto: pervasividade e prejuízo
+            "Esses padrões aparecem em diferentes contextos da minha vida (trabalho/estudos, família, amizades) e se mantêm ao longo do tempo.",
+            "Esses padrões causam prejuízo significativo na minha vida (por exemplo, conflitos, perdas de vínculo, dificuldades no trabalho/estudos)."
+          ];
+        
+          const miniBox = document.getElementById('mini-items');
+          const miniSel = [];
+          miniCrit.forEach((t, i) => {
+            const w = document.createElement('div');
+            w.className = 'q';
+            w.innerHTML = `<label for="mini_${i}">${i + 1}. ${t}</label>
+              <select id="mini_${i}" data-req="1">${toSel([{ v: 'sim', t: 'Sim' }, { v: 'nao', t: 'Não' }])}</select>`;
+            miniBox.appendChild(w);
+            miniSel.push(w.querySelector('select'));
+          });
+        
+          function scoreMINI() {
+            if (!needAll(miniSel)) throw 'Há itens da MINI (DSM-5-TR) sem resposta.';
+        
+            const yesSym = miniSel.slice(0, 9).filter(s => s.value === 'sim').length;
+            const pervas = miniSel[9].value === 'sim';
+            const impair = miniSel[10].value === 'sim';
+        
+            let classe = 'Sem indicadores clinicamente relevantes';
+            let tag = '<span class="stat muted">Sem indicadores</span>';
+            let interpretacao = `
+              <p><b>Nesta triagem, não surgiram sinais clinicamente relevantes</b> de traços narcisistas.
+              Mantenha o cuidado com autoestima realista, empatia e abertura a feedbacks. Caso perceba
+              dificuldades persistentes em relações, críticas ou autorregulação emocional, considere uma
+              avaliação psicológica individualizada.</p>
+            `;
+        
+            if (yesSym >= 5 && pervas && impair) {
+              classe = 'Alta probabilidade de TPN';
+              tag = '<span class="stat bad">Alta probabilidade de TPN</span>';
+              interpretacao = `
+                <p><b>As respostas sugerem alta probabilidade de Transtorno de Personalidade Narcisista.</b>
+                Os padrões descritos aparecem em diferentes contextos, mantêm-se no tempo e geram prejuízo
+                significativo. Recomenda-se avaliação clínica especializada para diagnóstico diferencial e
+                plano terapêutico. A psicoterapia pode ajudar na regulação emocional, no ajuste de expectativas,
+                no treino de empatia e na construção de relações mais saudáveis.</p>
+              `;
+            } else if (yesSym >= 3 || (yesSym >= 5 && (!pervas || !impair))) {
+              classe = 'Traços narcisistas clinicamente relevantes';
+              tag = '<span class="stat warn">Traços de PN</span>';
+              interpretacao = `
+                <p><b>Foram identificados traços narcisistas com relevância clínica</b>, mas sem todos os
+                elementos necessários para caracterizar o transtorno. Esses traços podem influenciar reações
+                a frustrações e críticas, além de afetar relações de intimidade. É útil desenvolver empatia
+                deliberada, flexibilizar padrões rígidos e ampliar o autoconhecimento. A terapia oferece
+                estratégias práticas para manejo interpessoal e emocional.</p>
+              `;
+            }
+        
+            const txt =
+        `MINI – DSM-5-TR (Narcisista): ${yesSym}/9 itens centrais “Sim”. ${tag}
+        Significado clínico:
+        ${interpretacao}`;
+            return { yes: yesSym, classe, tag, txt };
+          }
+          document.getElementById('mini-score').onclick = () => {
+            try { out('mini-out').innerHTML = ''; const r = scoreMINI(); out('mini-out').innerHTML = r.txt; }
+            catch (e) { alert(e); }
+          };
+          document.getElementById('mini-clear').onclick = () => {
+            miniSel.forEach(s => { s.value = ''; s.classList.remove('invalid'); });
+            out('mini-out').innerHTML = '';
+          };
+        
+          // ====== Relatório Integrado ======
+          function safe(fn){ try{ return fn(); } catch { return null; } }
+          const reportEl = document.getElementById('report');
+        
+          document.getElementById('gen-report').onclick=()=>{
+            // Campos mínimos para o cabeçalho do relatório
+            if(!idVal('nome') || !idVal('data')){ alert('Preencha Nome e Data da aplicação em Identificação.'); return; }
+        
+            // Tenta corrigir cada teste sem quebrar
+            const npi  = safe(scoreNPI);
+            const pid  = safe(scorePID);
+            const ffni = safe(scoreFFNI);
+            const mini = safe(scoreMINI);
+        
+            const p1 =
+        `Avaliando(a): ${idVal('nome')}${idVal('idade')?`, ${idVal('idade')} anos`:''}. Aplicação em ${idVal('data')}.
+        Testes aplicados: NPI-16; PID-5-BF (25); FFNI-SF (60); MINI (DSM-5-TR – narcisista).
+        Resultados apresentados como triagem dimensional e devem ser integrados à avaliação clínica.`;
+        
+            const pNpi  = npi  ? npi.txt  : 'NPI-16: não corrigido por falta de itens.';
+            const pPid  = pid  ? pid.txt  : 'PID-5-BF: não corrigido por falta de itens.';
+            const pFfni = ffni ? ffni.txt : 'FFNI-SF: não corrigido por falta de itens.';
+            const pMini = mini ? mini.txt : 'MINI (DSM-5-TR – narcisista): não corrigida por falta de itens.';
+        
+            // Sinalização sintética de atenção (sem expor critérios/cortes ao paciente)
+            const riskFlag =
+              (npi  && npi.faixa !== 'baixo') ||
+              (pid  && (pid.bandTotal !== 'baixo' || pid.bandAnt !== 'baixo')) ||
+              (ffni && (ffni.bTot !== 'baixo' || ffni.bGra !== 'baixo' || ffni.bVul !== 'baixo')) ||
+              (mini && mini.classe !== 'Sem indicadores clinicamente relevantes');
+        
+            const pSynth = `Síntese integrativa: ${
+              riskFlag
+                ? 'há indicadores relevantes de traços narcisistas na triagem atual. Recomenda-se entrevista clínica estruturada, investigação do impacto funcional e plano terapêutico focado em empatia, regulação emocional e pactos relacionais.'
+                : 'não há convergência robusta de indicadores na triagem atual. Manter observação clínica conforme contexto.'
+            }`;
+        
+            const obs = idVal('obs') ? `Observações clínicas: ${idVal('obs')}` : '';
+        
+            // Saída limpa (texto puro) para copiar/compartilhar
+            reportEl.textContent = [p1,pNpi,pPid,pFfni,pMini,pSynth,obs].filter(Boolean).join('\n\n');
+          };
+        
+          document.getElementById('copy-report').onclick = async()=>{
+            if(!reportEl.textContent.trim()){ alert('Gere o relatório antes de copiar.'); return; }
+            await navigator.clipboard.writeText(reportEl.textContent);
+            alert('Relatório copiado.');
+          };
+        
+          document.getElementById('send-whats').onclick = ()=>{
+            if(!reportEl.textContent.trim()){ alert('Gere o relatório antes de enviar.'); return; }
+            const nome = idVal('nome')||'Paciente';
+            const payload = `Bateria – Traços Narcisistas – ${nome}\n\n${reportEl.textContent}`;
+            window.open('https://wa.me/5535984647323?text='+encodeURIComponent(payload),'_blank');
+          };
+        
+          // Feedback visual: remover erro ao alterar
+          document.addEventListener('change',(e)=>{
+            const t=e.target;
+            if(t.classList.contains('invalid')&&t.value!==''){ t.classList.remove('invalid'); }
+          });
+    </script>
+</body>
+
+</html>
